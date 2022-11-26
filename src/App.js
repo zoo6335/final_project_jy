@@ -1,16 +1,15 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import FreeBoard from "./pages/FreeBoard"
-import FB_Detail from "./pages/FB_detail"
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Social from "./pages/Social";
+import SocialDetail from "./pages/SocialDetail";
 function App() {
   return (
-    // <FreeBoard />
-    <FB_Detail />
-    // <Router>
-    //   <Routes>
-    //     {/* <Route path="/" element={<FreeBoard />} /> */}
-    //   </Routes>
-    // </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Social />} />
+        <Route path="/detail" element={<SocialDetail />} />
+      </Routes>
+    </Router>
   );
 }
 

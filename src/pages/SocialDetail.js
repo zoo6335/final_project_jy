@@ -12,7 +12,7 @@ const FB_Detail = () => {
         <div className="parentBox">
           <div className="title">Title of the content</div>
           <div className="text">
-            A lucky, lucky girl She got married to a boy like you She'd kick you
+            나는 야 이주연 룰루랄라루 리리라라루A lucky, lucky girl She got married to a boy like you She'd kick you
             out if she ever, ever knew 'Bout all the - you tell me that you do
             Dirty, dirty boy You know everyone is talking on the scene I hear
             them whispering 'bout the places that you've been And how you don't
@@ -40,11 +40,11 @@ const DetailBox = styled.div`
   & > * {
     margin: 0;
     padding: 0;
-    font-family: "Alfa Slab One", cursive;
   }
   margin: 0px auto;
   .LOGO {
     // 메인 로고
+    font-family: "Alfa Slab One", cursive;
     text-align: center;
     padding: 20px;
     font-size: 40px;
@@ -57,6 +57,7 @@ const DetailBox = styled.div`
     padding: 10px;
   }
   .parentBox {
+    font-family: 'Song Myung', serif;
     width: 1024px;
     margin: 0px auto;
     padding: 5px;
