@@ -1,48 +1,36 @@
 import styled from "styled-components";
 import Photo from "../pic/짱난.gif";
 import InsertImg from "../pic/coffee.jpg";
+import { IoEyeOutline, IoHeartOutline, IoChatboxOutline } from "react-icons/io5";
 const Social = () => {
   return (
     <ListBlock>
       <div className="LOGO">Dev's</div>
       <div className="subtitle">Dev' Social</div>
-      <div className="inducer"> How To Use Social Board ~~ Tip... whatever</div>
+      <div className="inducer"> How To Use Social Board ~~  이렇게 사용해보세요 !</div>
+
       <div className="parentBox">
         <div className="childBox">
-          <div className="flex-box1">
-            <p className="title">
-              한국어도 써봐야 겠죠~ ! 어진쨔 대박이당You know I always wanna be Somewhere or anywhere that near by you
-              I wanna make this love clearly Make it more longer, make it more
-              stronger
-            </p>
-            <div className="name-date">
-              <img className="photos" src={Photo} alt="프로필 사진"></img>
-              <span className="nickName">NickName</span>
-              <span className="date">2022/11/22</span>
-            </div>
-          </div>
           <div className="flex-box2">
             <img className="insertImg" src={InsertImg} alt="첨부사진"></img>
           </div>
-        </div>
-        <div className="childBox">
           <div className="flex-box1">
-            <p className="title">
-              Too many ups and downs We have been through together, above love
-              You are more than my everything To me, oh, you are, hmm You're the
-              poet in my heart The changes in my mind, pounding in my heart
-              You're everything in my head You're the dreams I've always wished
-              A chance to be better Flowers in my path, my love
-            </p>
-            <div className="name-date">
-              <img className="photos" src={Photo} alt="프로필 사진"></img>
-              <span className="nickName">NickName</span>
-              <span className="date">2022/11/22</span>
-              <span>📝</span>
+            <div className="content-title">백엔드 신입으로 입사했는데, 프론트엔드 일을 시킵니다..</div>
+            <div className="hashtag-box">
+              <span className="hashtag">#해시태그</span>
             </div>
-          </div>
-          <div className="flex-box2">
-            <img className="insertImg" src={InsertImg} alt="첨부사진"></img>
+            <div className="flex-box3">
+              <div className="publisher-info">
+                <img className="photos" src={Photo} alt="프로필 사진"></img>
+                <span className="nickName">NickName</span>
+                <span className="date">| 22.11.22</span>
+              </div>
+              <div className="icon-box">
+                <IoEyeOutline /><span className="count">5</span>
+                <IoHeartOutline /><span className="count">5</span>
+                <IoChatboxOutline /><span className="count">5</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +39,9 @@ const Social = () => {
 };
 
 const ListBlock = styled.div`
-  * {
+  * { 
+    font-family: 'Yeon Sung', cursive;
+    font-family: 'Song Myung', serif;
     margin: 0;
     padding: 0;
   }
@@ -81,7 +71,7 @@ const ListBlock = styled.div`
     padding: 5px;
     border: 1px solid black;
     margin: 0px auto;
-    background-color: rgba(211, 188, 230, 0.25);
+    background-color: rgba(211, 188, 230, 0.1);
   }
   .childBox {
     display: flex;
@@ -92,24 +82,48 @@ const ListBlock = styled.div`
     background-color: white;
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
     & > * {
-      font-size: 15px;
+      font-size: 20px;
     }
   }
   .flex-box1 {
     display: flex;
     flex-direction: column;
+    padding: 10px;
   }
   .flex-box2 {
     flex-grow: 1.5;
     overflow: hidden;
     position: relative;
   }
-  .title {
+  .insertImg {
+    height: 90%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute; // = 부모 기준 배치
+    left: 5px;
+    top: 5px;
+    background-image: url("../pic/coffee.jpg");
+    background-size: cover;
+  }
+  .flex-box3{
+    display: flex;
+    justify-content : space-between;
     margin: 5px;
-    border: 1px solid grey;
+  }
+  .icon-box{
+    display: flex;
+    align-items: center;
+  }
+  .content-title {
+    margin: 5px;
+    /* border: 1px solid grey; */
     width: 750px;
   }
-  .name-date {
+  .hashtag{
+    padding: 10px;
+    font-style: italic;
+  }
+  .publisher-info {
     display: flex;
     align-items: center;
   }
@@ -123,15 +137,21 @@ const ListBlock = styled.div`
     margin: 0 5px;
   }
   .date {
-    font-size: 10px;
+    color: grey;
     margin: 0 5px;
   }
-  .insertImg {
-    height: 100%;
-    width: 100%;
-    position: absolute; // = 부모 기준 배치
-    /* right: 0; */
-    /* top: 0; */
+  .count{
+    padding: 5px;
+  }
+  .hashtag-box{
+    margin: 10px;
+  }
+  .hashtag{
+    margin: 0px 3px;
+    padding: 8px;
+    font-style: italic;
+    background-color:rgba(219, 219, 219, 0.5);
+    border-radius: 10px;
   }
 `;
 

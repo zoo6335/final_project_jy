@@ -1,0 +1,103 @@
+* { 
+  font-family: 'Yeon Sung', cursive;
+  font-family: 'Song Myung', serif;
+  margin: 0;
+  padding: 0;
+}
+.LOGO {
+  // 메인 로고
+  text-align: center;
+  font-family: "Alfa Slab One", cursive;
+  padding: 20px 0;
+  font-size: 40px;
+  border: 3px solid black;
+}
+.subtitle {
+  // 부제목
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  font-family: "Alfa Slab One", cursive;
+}
+.inducer {
+  padding: 10px;
+  text-align: center;
+}
+.parentBox {
+  font-family: 'Yeon Sung', cursive;
+  font-family: 'Song Myung', serif;
+  width: 1024px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 0px auto;
+  background-color: rgba(211, 188, 230, 0.25);
+}
+.childBox {
+  display: flex;
+  height: 100%;
+  margin: 20px 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  & > * {
+    font-size: 20px;
+  }
+}
+.flex-box1 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.flex-box2 {
+  flex-grow: 1.5;
+  overflow: hidden;
+  position: relative;
+}
+.insertImg {
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute; // = 부모 기준 배치
+  left: 5px;
+  top: 5px;
+  background-image: url("../pic/coffee.jpg");
+  background-size: cover;
+}
+.flex-box3{
+  display: flex;
+  justify-content : space-between;
+  margin: 5px;
+}
+.icon-box{
+  display: flex;
+  align-items: center;
+}
+.title {
+  margin: 5px;
+  border: 1px solid grey;
+  width: 750px;
+}
+.hashtag{
+  padding: 10px;
+}
+.publisher-info {
+  display: flex;
+  align-items: center;
+}
+.photos {
+  margin: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.nickName {
+  margin: 0 5px;
+}
+.date {
+  color: grey;
+  margin: 0 5px;
+}
+.count{
+  padding: 5px;
+}

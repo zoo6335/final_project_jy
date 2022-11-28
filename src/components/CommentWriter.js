@@ -1,15 +1,11 @@
 import { useRef } from "react";
 import styled from "styled-components";
 
-const ContentWriter = ({ inputContent, setInputContent }) => {
+const ContentWriter = () => {
   return (
     <WriteBlock>
       <div className="parentBox">
-        <div className="childBox">
-          <textarea className="name" placeholder="name"></textarea>
-          <textarea className="password" placeholder="password"></textarea>
-        </div>
-        <textarea className="content" placeholder="write your comment here" />
+        <textarea className="content" placeholder="댓글을 입력해주세요 (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧^" />
       </div>
     </WriteBlock>
   );
@@ -18,21 +14,23 @@ const WriteBlock = styled.div`
   * {
     font-family: "Alfa Slab One", cursive;
     font-size: 20px;
+    font-family: 'Song Myung', serif;
+    margin: 0;
+    padding: 0;
+
   }
   display: flex;
   justify-content: center;
 
   .parentBox {
-    background-color: rgba(245, 245, 245, 255);
-    width: 500px;
+    /* background-color: rgba(245, 245, 245, 255); */
+    padding: 10px;
+    margin: 20px 50px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    padding: 10px;
     align-items: stretch;
-    box-shadow: 10px 10px 10px rgba(0, 0, 255, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 255, 0.2);
 
     textarea {
       padding: 10px;
@@ -40,31 +38,14 @@ const WriteBlock = styled.div`
       border: none;
       resize: none;
     }
-
-    & > .childBox {
-      display: flex;
-      justify-content: space-evenly;
-      & > textarea {
-        width: 200px;
-        height: 50px;
-        border-radius: 20px;
-        background-color: rgb(98, 98, 112);
-        &::placeholder {
-          color: white;
-          text-align: center;
-        }
-      }
-    }
   }
   .content {
     width: 100%;
-    height: 120px;
-    margin-top: 20px;
+    height: 100px;
     background-color: rgba(245, 245, 245, 255);
     color: rgb(98, 98, 112);
     &::placeholder {
       color: rgb(98, 98, 112);
-      /* text-align: center; */
     }
   }
 `;
