@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from "styled-components";
 import Photo from "../pic/짱난.gif";
 import InsertImg from "../pic/coffee.jpg";
